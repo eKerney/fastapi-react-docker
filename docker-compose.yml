@@ -15,6 +15,8 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules  # Preserve node_modules
+    env_file:
+      - ./frontend/.env  # Load .env into container
     depends_on:
       - backend
 
